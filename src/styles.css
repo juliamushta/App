@@ -1,0 +1,61 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  color: #545765;
+  font-size: 30px;
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  color: #545765;
+  font-size: 16px;
+  list-style: none;
+}
+
+.app {
+  border: 1px solid #BFBFC2;
+  border-radius: 12px;
+  background: #ececec;
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+img {
+  width: 74px;
+}
+
+.temp {
+  color: #545765;
+  font-size: 38px;
+}
+
+.all-temp {
+  background: #fff;
+  border-radius: 8px;
+}
+
+.units {
+  position: relative;
+  top: -17px;
+}
+
+.search-form {
+  margin-bottom: 18px;
+}
+
+.form-control {
+  border: none;
+}
+.btn-primary {
+  color: #545765;
+  background: #cefcff;
+  border: none;
+}
