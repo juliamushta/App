@@ -35,9 +35,9 @@ clickSearch.addEventListener("submit", searchCity);
 function showValue(response) {
   let h1 = document.querySelector("#headingCity");
   h1.innerHTML = response.data.name;
-  let temperature = Math.round(response.data.main.temp);
+  let celsiusTemp = Math.round(response.data.main.temp);
   let actualTemperature = document.querySelector("#temperatureValue");
-  actualTemperature.innerHTML = `${temperature}`;
+  actualTemperature.innerHTML = `${celsiusTemp}`;
   let iconElement = document.querySelector("#icon");
   document.querySelector("#humidity").innerHTML = Math.round(
     response.data.main.humidity
@@ -75,7 +75,27 @@ function getCurrentLocation(event) {
 let currentButton = document.querySelector("#current-button");
 currentButton.addEventListener("click", getCurrentLocation);
 
-findCity("Kyiv");
+function displayFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  let tempElement = document.querySelector("#temperatureValue");
+  tempElement.innerHTML = Math.round(fahrenheitTemp);
+}
 
+function displayCelsius(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temperatureValue");
+  tempElement.innerHTML = Math.round(celsiusTemp); 
+}
+
+let celsiusTemp = null;
+
+let fahrenheitLink = document.querySelector("#tempFahrenheit");
+fahrenheitLink.addEventListener("click", displayFahrenheit);
+
+let celsiusLink = document.querySelector("#tempCelsius");
+celsiusLink.addEventListener("click", displayCelsius);
+
+findCity("Kyiv");
 
 
