@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="src/styles.css">
+  <title>Weather App</title>
+</head>
+<body>
+  <div class="container">
+    <div class="app">
+      <form class="search-form" id="search-form">
+        <div class="row">
+          <div class="col-6"> 
+            <input
+            type="search"
+            id="citySearch"
+            placeholder="Type a city..."
+            class="form-control" 
+            />
+          </div>
+          <div class="col-3">
+            <input type="submit"
+            id="searchBtn"
+            value="Search"
+            class="form-control btn btn-primary"/>
+          </div>
+          <div class="col-3">
+            <button class="btn btn-success" id="current-button">
+              Current1
+            </button>  
+          </div>
+        </div>
+      </form>
+      <h1 id="headingCity">
+        Kyiv, Ukraine
+      </h1>
+      <ul>
+        <li id="currentDate">
+          Sunday 14:15
+        </li>
+        <li id="description">
+          Partly Cloudy
+        </li>
+      </ul>
+      <div class="row">
+        <div class="col-6">
+          <div class="all-temp"><img src="cloudy.svg" alt="cloud">
+            <span class="temp" id="temperatureValue">20</span><span class="units"><a href="#" id="tempCelsius">°C</a>|<a href="#" id="tempFahrenheit">F</a></span>
+          </div>
+        </div>
+        <div class="col-6">
+          <ul>
+            <li>
+              Humidity: <span id="humidity">55</span>%
+            </li>
+            <li>
+              Wind: <span id="wind">15</span> km/h
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="src/index.js"></script>
+</body>
+</html>
