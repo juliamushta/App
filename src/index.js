@@ -35,7 +35,7 @@ clickSearch.addEventListener("submit", searchCity);
 function showValue(response) {
   let h1 = document.querySelector("#headingCity");
   h1.innerHTML = response.data.name;
-  let celsiusTemp = Math.round(response.data.main.temp);
+  celsiusTemp = Math.round(response.data.main.temp);
   let actualTemperature = document.querySelector("#temperatureValue");
   actualTemperature.innerHTML = `${celsiusTemp}`;
   let iconElement = document.querySelector("#icon");
